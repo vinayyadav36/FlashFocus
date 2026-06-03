@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2022",
     "module": "nodenext",
-    "rootDir": "..",
+    "rootDir": "./",
     "outDir": "dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

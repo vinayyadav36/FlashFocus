@@ -7,7 +7,7 @@ export async function ensureSeedData() {
   try {
     await fs.access(SEED_FILE);
   } catch (error) {
-    console.log('Seed file not found, creating default templates...');
+    // Seed templates
     const dirPath = path.dirname(SEED_FILE);
     await fs.mkdir(dirPath, { recursive: true });
 

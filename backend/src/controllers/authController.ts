@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import { readData, writeData } from '../storage/index.js';
-import { User } from '../../../shared/types/index.js';
-import { generateId, getTimestamp } from '../../../shared/utils/index.js';
-import { isEmailValid } from '../../../shared/schemas/index.js';
+import { User } from '../shared/types/index.js';
+import { generateId, getTimestamp } from '../shared/utils/index.js';
+import { isEmailValid } from '../shared/schemas/index.js';
 import { hashPassword, verifyPassword } from '../auth/hash.js';
 import jwt from 'jsonwebtoken';
 

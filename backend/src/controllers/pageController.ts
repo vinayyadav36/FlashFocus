@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { readData, writeData } from '../storage/index.js';
-import { PageConfig } from '../../../shared/types/index.js';
-import { generateId, getTimestamp } from '../../../shared/utils/index.js';
+import { PageConfig } from '../shared/types/index.js';
+import { generateId, getTimestamp } from '../shared/utils/index.js';
 import { AuthRequest } from '../middleware/authMiddleware.js';
 
 const PAGES_FILE = 'content/pages.json';

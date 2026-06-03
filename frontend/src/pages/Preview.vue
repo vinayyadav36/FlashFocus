@@ -43,7 +43,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
-import { PageConfig } from '../../../shared/types/index';
+import { PageConfig } from '../shared/types/index';
 
 const route = useRoute();
 const slug = route.params.slug as string;
