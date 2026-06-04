@@ -30,7 +30,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import { useAuthStore } from '../stores/authStore';
-import { PageConfig } from '../../../shared/types/index';
+import { PageConfig } from '../shared/types/index';
 
 const pages = ref<PageConfig[]>([]);
 const loading = ref(true);
@@ -45,7 +45,7 @@ onMounted(async () => {
       pages.value = await res.json();
     }
   } catch (error) {
-    console.error('Failed to load pages', error);
+    // ignore
   } finally {
     loading.value = false;
   }

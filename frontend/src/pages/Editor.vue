@@ -87,8 +87,8 @@ import { ref, onMounted, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useAuthStore } from '../stores/authStore';
 import { useOfflineDraft } from '../composables/useOfflineDraft';
-import { PageConfig, BlockTemplate } from '../../../shared/types/index';
-import { generateId } from '../../../shared/utils/index';
+import { PageConfig, BlockTemplate } from '../shared/types/index';
+import { generateId } from '../shared/utils/index';
 
 const route = useRoute();
 const router = useRouter();
@@ -114,7 +114,7 @@ const loadData = async () => {
   try {
     const tRes = await fetch('/api/templates');
     if (tRes.ok) templates.value = await tRes.json();
-  } catch (e) { console.error('Failed to load templates', e); }
+  } catch (e) { /* ignore */ }
 
   // Check for draft first
   const draft = loadDraft();
@@ -132,7 +132,7 @@ const loadData = async () => {
          alert(data.error || 'Failed to load page');
          router.push('/dashboard');
       }
-    } catch (e) { console.error('Failed to load page', e); }
+    } catch (e) { /* ignore */ }
   }
 };
 

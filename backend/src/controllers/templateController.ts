@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { readData } from '../storage/index.js';
-import { BlockTemplate } from '../../../shared/types/index.js';
+import { BlockTemplate } from '../shared/types/index.js';
 
 const TEMPLATES_FILE = 'seed/templates.json';
 

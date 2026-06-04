@@ -1,5 +1,5 @@
 import { ref } from 'vue';
-import { PageConfig } from '../../../shared/types/index';
+import { PageConfig } from '../shared/types/index';
 
 export function useOfflineDraft(pageId: string | undefined) {
   const isOffline = ref(!navigator.onLine);
